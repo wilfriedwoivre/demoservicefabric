@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Service Fabric Tools\Microsoft.VisualStudio.Azure.Fabric.ApplicationProject.props" />
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>11a5e407-e190-4cdd-93b6-f7a3283570ea</ProjectGuid>
+    <ProjectVersion>0.5</ProjectVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="ApplicationManifest.xml" />
+    <None Include="Scripts\Create-FabricApplication.ps1" />
+    <None Include="Scripts\Deploy-FabricApplication.ps1" />
+    <None Include="Scripts\Get-FabricApplicationStatus.ps1" />
+    <None Include="Scripts\Remove-Deployment.ps1" />
+    <None Include="Scripts\Utilities.psm1" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DemoBlog.ServiceFabric.CalculatorHistory\DemoBlog.ServiceFabric.CalculatorHistory.csproj" />
+    <ProjectReference Include="..\DemoBlog.ServiceFabric.Calculator\DemoBlog.ServiceFabric.Calculator.csproj" />
+    <ProjectReference Include="..\DemoBlog.ServiceFabric.Gateway\DemoBlog.ServiceFabric.Gateway.csproj" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Service Fabric Tools\Microsoft.VisualStudio.Azure.Fabric.ApplicationProject.targets" />
+</Project>
